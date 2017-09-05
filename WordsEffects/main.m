@@ -57,10 +57,45 @@ int main(int argc, const char * argv[]) {
                     
                     break;
                 }
-                //
-                    //
+                    
+                case 2: {
+                    NSString *lowerCase = [inputString lowercaseString];
+                    NSLog(@"Input was: %@", lowerCase);
+                    break;
+                }
+                    
+                case 3:{
+                    int numberize = [inputString intValue];
+                    NSLog(@"Input was: %d", numberize);
+                    break;
+                }
+                    
+                case 4:{
+                    NSString *canadianize = [inputString stringByAppendingString:@", eh?"];
+                    NSLog(@"Input was: %@", canadianize);
+                    break;
+                }
+                    
+                case 5:{
+                    NSString *respond = inputString;
+                    if ([respond containsString:@"?"]){
+                        NSLog(@"I don't know.");
+                    }else if([respond containsString:@"!"]){
+                        NSLog(@"Woah calm down");
+                    }else {
+                        NSLog(@"Input was: %@", respond);
+                    }
+                    break;
+                }
+                    
+                case 6:{
+                    NSString *deSpaceIt = [ inputString stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+                    NSLog(@"Input was: %@", deSpaceIt);
+                    break;
+                    
+                }
                 default:
-                    NSLog (@"Integer out of range");
+                    NSLog (@"Could not recognize number, please try again.");
                     break;
             }
             
